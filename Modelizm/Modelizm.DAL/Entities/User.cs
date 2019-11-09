@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Modelizm.DAL.Entities
 {
@@ -11,6 +10,7 @@ namespace Modelizm.DAL.Entities
 		public string Login { get; set; }
 		public string Password { get; set; }
 		public bool IsAdmin { get; set; }
+		public DateTime DateTimeLogged { get; set; }
 
 		public ICollection<Order> Orders { get; set; }
 		public ICollection<Session> Sessions { get; set; }
