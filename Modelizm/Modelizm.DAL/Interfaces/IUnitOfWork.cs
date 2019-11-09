@@ -1,7 +1,5 @@
 ﻿using System;
 using Modelizm.DAL.Entities;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Modelizm.DAL.Interfaces
 {
