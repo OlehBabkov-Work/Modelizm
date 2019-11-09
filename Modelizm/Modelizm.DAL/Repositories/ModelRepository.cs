@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using System.Text;
 
 namespace Modelizm.DAL.Repositories
 {
@@ -33,21 +32,21 @@ namespace Modelizm.DAL.Repositories
 			return _context.Models.Where(predicate).ToList();
 		}
 
-		public void Create(Model item)
+		public void Create(Model model)
 		{
-			_context.Models.Add(item);
+			_context.Models.Add(model);
 		}
 
-		public void Update(Model item)
+		public void Update(Model model)
 		{
-			_context.Entry(item).State = EntityState.Modified;
+			_context.Entry(model).State = EntityState.Modified;
 		}
 
 		public void Delete(int id)
 		{
-			var model = _context.Models.Find(id);
+			var model = Get(id);
 			if (model != null)
-				_context.Remove(model);
+				_context.Models.Remove(model);
 		}
 	}
 }
