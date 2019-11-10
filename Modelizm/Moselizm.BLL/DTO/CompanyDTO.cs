@@ -1,14 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace Modelizm.DAL.Entities
+﻿namespace Moselizm.BLL.DTO
 {
-	public class Company
+	public class CompanyDTO
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Country { get; set; }
 		public string Description { get; set; }
-
-		public ICollection<Model> Models { get; set; }
 	}
 }
